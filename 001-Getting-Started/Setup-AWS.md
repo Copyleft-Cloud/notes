@@ -24,8 +24,7 @@ Reminder: Let’s Use our Password Vault to Generate and Store another Kickass P
 - Last Pass is great isn’t it?
 
 ### STEP 5: You Should Receive Multiple Emails from AWS
--GETTING STARTED GUIDES and ETC…
-https://aws.amazon.com/getting-started/?sc_channel=em&sc_campaign=wlcm&sc_publisher=aws&sc_medium=em_wlcm_1&sc_detail=wlcm_1b&sc_content=other&sc_country=global&sc_geo=global&sc_category=mult&ref_=pe_1679150_132208640
+-GETTING STARTED GUIDES https://aws.amazon.com/getting-started/
 
 
 ### STEP 6: Explore around the AWS Services
