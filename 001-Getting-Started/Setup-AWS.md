@@ -54,7 +54,7 @@ From here we can add and manage accounts which have access to our AWS Account.
 ### STEP 8: Let’s Create a Security Group
 - We need a security group for our team of Cloud Engineers the more declarative the better…
 
-- Group Name: <domain>Engineers  (e.g. CopyleftCloudEngineers)
+- Group Name: &lt;domain&gt;Engineers  (e.g. CopyleftCloudEngineers)
 
 Let’s Select a Few Policies to Associate with our Security Group
 ```
@@ -105,7 +105,8 @@ Now that our Group Exists… let’s add Users as Members…
           - This is the last time these credentials will be available to download. You can always create new credentials at anytime.
           - You'll be provided with AWS Management Console Sign-In URL for your Account
 
-          # Users with AWS Management Console access can sign-in at: https://<aws_account_id>.signin.aws.amazon.com/console
+          # Users with AWS Management Console access can sign-in at:
+          https:// &lt;aws_account_id&gt; .signin.aws.amazon.com/console
 
 
 ```
@@ -113,7 +114,7 @@ Now that our Group Exists… let’s add Users as Members…
 ### STEP 10: Lets Test Console Login
 - Our New User Account is Active.  Let’s test the login at the console sign-in URL…
 - TEST AWS CONSOLE ACCESS
-    - URL https://<aws_account_id>.signin.aws.amazon.com/console  
+    - URL https:// &lt;aws_account_id&gt; .signin.aws.amazon.com/console 
     (This is provided during IAM User Setup)
 
 #### TIP:
