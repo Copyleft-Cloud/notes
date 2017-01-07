@@ -2,13 +2,13 @@
 
 ### STEP 1: Go To https://aws.amazon.com/
 
-### STEP 2 :Sign Up for an AWS Account
--  We'll be signing up using the Admin Account
+### STEP 2: Sign Up for an AWS Account
+- We'll be signing up using the Admin Account
 - Email: (e.g. admin@example.com)
 - Name: (e.g. Domain Administrator)
 - Password: (e.g. Generate a Strong Password)
 
-Reminder: Let’s Use our Password Vault to Generate and Store another KickAss Password!
+Reminder: Let’s Use our Password Vault to Generate and Store another Kickass Password!
 
 ### STEP 3: Complete the Sign Up Form
 - Accept the Terms
@@ -17,10 +17,10 @@ Reminder: Let’s Use our Password Vault to Generate and Store another KickAss P
      - Automated Phone Call + Pin
 - Support Plan
      - Select Basic, which is Free.
-     - Other plans are available starting at 29 per month… select what works best for you and your team.
+     - Other plans are available starting at $29 per month… select what works best for you and your team.
 - Complete Sign-Up
 
-### STEP 4 :Sign-In Using Your New Account
+### STEP 4: Sign-In Using Your New Account
 - Last Pass is great isn’t it?
 
 ### STEP 5: You Should Receive Multiple Emails from AWS
