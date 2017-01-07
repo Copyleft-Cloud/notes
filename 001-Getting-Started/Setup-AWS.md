@@ -195,7 +195,7 @@ This will be the key that we use to SSH into any new EC2 Instances which are pro
 It is often helpful to have a single SSH Key that our Engineers and scripts use to SSH into new Hosts as they are initially provisioned
 
 - From the EC2 Dashboard Select Key Pairs under Network & Security
-- KeyPair Name: copyleft
+- KeyPair Name: &lt;domain name&gt; (e.g. copyleft)
 - Click Create
 - A New PEM Key (copyleft.pem) is downloaded your local machine
 - Store this PEM Key in your .ssh/ directory we will be using it soon!
