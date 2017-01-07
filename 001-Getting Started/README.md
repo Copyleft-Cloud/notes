@@ -24,7 +24,9 @@ We're gonna take a few minutes to install a few tools, just enough to get us sta
 
 
 ## SSH Keys
-We're going to create some SSH Keys... one set for an admin account and another our own individual accounts for each member of the team. SSH keys provide a more secure way of logging into servers with SSH than using a password. We will be using SSH Keys quite extensively.
+We're going to create some SSH Keys... one set for an admin account and another our own individual accounts for each member of the team.
+
+SSH keys provide a more secure way of logging into servers with SSH than using a password. We will be using SSH Keys quite extensively.
 
 - Generating a Key Pair is simple.
 - You will have a Public and Private Key.
@@ -37,30 +39,37 @@ We're going to create an SSH Key Pair for an Admin Account (e.g. admin@example.c
 
 ### EXAMPLE:
 STEP 1: Create the RSA Key Pair
+```
     ssh-keygen -t rsa -C "admin@example.com"
     Generating public/private rsa key pair.
+```
 
 STEP 2: You'll be prompted with several additional questions...
+```
     Enter file in which to save the key (/Users/john.doe/.ssh/id_rsa): id_admin_example_com
     Enter passphrase (empty for no passphrase): <leave blank>
     Enter same passphrase again: <leave blank>
     Your identification has been saved in id_admin_example_com
     Your public key has been saved in id_admin_example_com.pub
-
+```
 
 We're going to create an SSH Key Pair for your Individual Account (e.g. john.doe@example.com)
 
 ### EXAMPLE:
 STEP 1: Create the RSA Key Pair
+```
     ssh-keygen -t rsa -C "john.doe@example.com"
     Generating public/private rsa key pair.
+```
 
 STEP 2: You'll be prompted with several additional questions...
+```
     Enter file in which to save the key (/Users/john.doe/.ssh/id_rsa): id_john_doe_example_com
     Enter passphrase (empty for no passphrase): <leave blank>
     Enter same passphrase again: <leave blank>
     Your identification has been saved in id_john_doe_example_com
     Your public key has been saved in id_john_doe_example_com.pub
+```
 
 ### TIP:
 Good Practices for SSH Keys make it much more simple to manage down the road for yourself and the team.  The more declarative the better is a good rule of thumb.

@@ -37,7 +37,7 @@ Check your inbox for the invitation to join the new organization.
 
 ### STEP 8: Setup your Workspace on your Local Machine
 On your Local Workstation… let’s create a workspace directory where we will manage our Repositories for Copyleft Cloud
-
+```
     # Let’s Create a Main Github Directory
     mkdir Github && cd $_
 
@@ -47,7 +47,7 @@ On your Local Workstation… let’s create a workspace directory where we will 
 
     # As we create git repos on GitHub this is the directory where we will clone our git repos
     pwd /Users/brian.hooper/Github/copyleft-cloud
-
+```
 
 ## Summary
 We've created our GitHub Organization and Team... invited new Team Member(s) and uploaded our SSH Public Key to our Profile.
