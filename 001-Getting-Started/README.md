@@ -88,6 +88,7 @@ If you don't have accounts for the following services, here are a few quick guid
 
 Here is a list of the Accounts and Services we'll be starting off with...
 - Setup LastPass Account
+- Setup Slack Account (if you have your own domain)
 - Setup GitHub Account, Organization, and Team
 - Setup Travis-CI Account
 - Setup DigitalOcean Account
