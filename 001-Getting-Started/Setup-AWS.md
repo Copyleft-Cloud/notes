@@ -188,7 +188,7 @@ Our Default DHCP Options Set
 - Not much to see here… yet, just the Default Security Group.
 
 
-### CREATE A KEY PAIR
+### STEP 14: CREATE A KEY PAIR
 This will be the key that we use to SSH into any new EC2 Instances which are provisioned under our account.  
 
 #### TIP
