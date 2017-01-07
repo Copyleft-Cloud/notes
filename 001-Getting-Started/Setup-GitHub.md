@@ -50,6 +50,8 @@ On your Local Workstation… let’s create a workspace directory where we will 
 ```
 
 ## Summary
-We've created our GitHub Organization and Team... invited new Team Member(s) and uploaded our SSH Public Key to our Profile.
+- We've created our GitHub Organization and Team
+- We've invited new Team Member(s)
+- We've joined and uploaded our SSH Public Key to our Profile.
 
 As we continue, we'll be using GitHub to centrally manage the source code repositories for our team's work.  It's Infrastructure as Code... woot! woot!
