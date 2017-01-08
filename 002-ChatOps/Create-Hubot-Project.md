@@ -110,7 +110,7 @@ Following our successful test, let's push our initial commit to our Git Reposito
 ```
 git status
 git add .
-git commit -m "Initial Commmit"
+git commit -m "Initial Commit"
 git push -u origin master
 git status
 

@@ -55,8 +55,17 @@ From here you should see yourself as a Member.
 - Paste in the Admin Public Key (id_admin_example_com.pub)
 - Provide a Name… I’d recommend using the same name as the private key file in your .ssh directory
 
+### STEP 9: Generate an API Access Token at DigitalOcean
+We will need a DigitalOcean API Token in order to provision resources such as new Droplets (aka Virtual Servers) via automation using tools like Terraform.
+
+- Login to DigitalOcean using your Individual Account
+- Navigate to API
+- Click Generate New Token
+- Name: (e.g. john.doe.do.api.token)
+
 ## Summary
 - We’ve Created an Admin Account and converted it to a Team
 - We’ve Invited ourselves to the new Team
-- We’ve created SSH Keys and Uploaded them to our Team and Individual Profiles
+- We’ve Created SSH Keys and Uploaded them to our Team and Individual Profiles
+- We've Generated an API Access Token
 - Ok, we’re all set up for now… let’s move on to AWS

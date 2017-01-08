@@ -1,3 +1,8 @@
+#### Disclaimer
+This Notes repository is part of Copyleft Cloud, an open sourced journey from the practitioners at Copyleft.io
+
+---
+
 # Copyleft Cloud Field Notes
 This the collection of fields notes from our practitioners as we learn by doing.
 

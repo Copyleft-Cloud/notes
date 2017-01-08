@@ -47,7 +47,7 @@ git clone git@github.com:Copyleft-Cloud/terraform.git
 
 ### STEP 6: Overview Our Project Directory
 
-Project Overview...
+The Big Picture...
 ```
 /
   /global
@@ -100,9 +100,75 @@ Note that we've symlinked a few files (.tfvars) from a global directory down int
 Note that we've got a modules directory. This is where we will create some reusable modules that we can leverage for consistency across environments for a provider. This helps to keep our terraform project DRY (don't repeat yourself) and can help with reusability and consistency across environments.
 
 
+### STEP 7: Create New Github Repository
+Let's go ahead create our Git Repository on GitHub
+- Repository Name: terraform
+- Public: Yes
+- Initialize README: Yes
+- Add Write Permissions to for our Engineers
+
+### STEP 8: Clone New Git Repo
+Let's clone the new repo to our local workstation
+```
+cd /Users/<username>/Github/copyleft-cloud
+git clone git@github.com:Copyleft-Cloud/terraform.git
+
+```
+
+### STEP 9: Initial Project Directory
+
+Create our Base Folder Structure to start...
+```
+cd /Users/<username>/Github/copyleft-cloud/terraform
+mkdir global modules provider-aws provider-do
+```
+
+Create our .gitignore File
+```
+# SECRET VARS (do not push to git)
+# Includes Credentials, Private Keys
+global/secret.tfvars
+
+# Do not Push .terraform modules
+*/.terraform
+
+```
+
+Create /terraform/global/secret.tfvars
+```
+# SECRET VARIABLES (do not push to git)
+# ADD TO .gitignore
+
+# AMAZON WEB SERVICES (AWS)
+aws_account_id = "<AWS Account ID>"
+aws_access_key = "<AWS Access Key>"
+aws_secret_key = "<AWS Secret Key>"
+
+# DIGITAL OCEAN (DO)
+do_api_token = "<DigitalOcean API Token>"
+```
+
+### STEP 10: Push an Initial Commit to Github
+Following our successful test, let's push our initial commit to our Git Repository on Github.  
+
+Friendly reminder, be sure that you have your .gitignore file in place and saved.  Double check the git status to ensure that you are not committing and pushing your secret.tfvars (with your private keys) up to Github.
+
+```
+git status
+git add .
+git commit -m "Initial Commit"
+git push -u origin master
+git status
+
+```
+
+
 ## Summary
 Ok, we're ready to start working with Terraform. As we roll up our sleeves and get to work, we'll be covering more topics in depth as we go with each provider and solution we develop.  At this point we have accomplished the following...
 
 - We've installed the terraform binary
 - We've reviewed our project directory
 - We've reviewed a few good practices
+- We've setup our initial project directory and a few files
+
+The next step is to start working with a provider such as AWS and DigitalOcean to provision our infrastructure!
