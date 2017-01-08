@@ -45,13 +45,9 @@ cd /Users/<username>/Github/copyleft-cloud
 git clone git@github.com:Copyleft-Cloud/terraform.git
 ```
 
+### STEP 6: Overview Our Project Directory
 
-### STEP 6: Review Our Directory Structure
-Per our good practices, we are wanting to manage configuration and state separately for each environment.  As we will be using both DigitalOcean and AWS as providers for environments, we'll set up our directory accordingly to separate contexts...
-
-Thus, if we need to manage additional providers and subsequent environments, we have a neat and organized project.  Managing state (.tfstate) separately for each environment removes a substantial amount of risk and limits the blast radius of our infrastructure changes.  
-
-Overview...
+Project Overview...
 ```
 /
   /global
@@ -64,18 +60,49 @@ Overview...
 
   /provider-aws           # AWS Provider
     /env-ops              # Operations (OPS) Environment
-      operations.tf       # Operations Environment Terraform Plan
+      device-<role1>.tf   # Device (e.g. EC2 Instance)
+      device-<role2>.tf   # Device (e.g. EC2 Instance)
+      device-<role3>.tf   # Device (e.g. EC2 Instance)
+      network.tf          # Network (e.g. VPC, Subnets, Gateways, Routes)
+      security.tf         # Security (e.g. Security Groups)
       operations.tfvars   # Operations Environment Variables
       secret.tfvars       # Symlinked from Global
       global.tfvars       # Symlinked from Global
 
   /provider-do            # DigitalOcean Provider
     /env-svc              # Service (SVC) Environment
-      service.tf          # Service Environment Terraform Plan
+      device-<role1>.tf   # Device (e.g. Droplet Instance)
+      device-<role2>.tf   # Device (e.g. Droplet Instance)
+      device-<role3>.tf   # Device (e.g. Droplet Instance)    
+      network.tf          # Network (e.g. Private Network, DNS, IPs)
       service.tfvars      # Service Environment Variables
       secret.tfvars       # Symlinked from Global
       global.tfvars       # Symlinked from Global
 
 ```
 
+Per our good practices, we are wanting to manage configuration and state separately for each environment as well as provider.  As we will be using both DigitalOcean and AWS as Cloud Hosting providers for our operations and execution environments, we'll set up our directory accordingly to separate these contexts.
+
+Thus, if we need to manage additional providers and subsequent environments, we have a neat and organized project directory where we can manage those artifacts.  Here are a few good tips that we've implemented based on our experience...
+
+#### TIP 1: Limit the Blast Radius
+Managing state (.tfstate) separately for each environment removes a substantial amount of risk and limits the blast radius of our infrastructure changes.  As you can see above we are doing this by provider (AWS, DO) and by environment.
+
+#### TIP 2: Separate your Concerns
+Note that within each environment we are separating our concerns (e.g. Devices, Network, Security, etc) so that it is more straightforward to develop and maintain our code base.
+
+When implementing infrastructure as code... code commits and pull requests will most likely become real changes to your platform.  Make it as simple as possible for yourself and your team to reason about your platform, identify and manage the risk of  those changes.
+
+#### TIP 3: Symlink Global Files
+Note that we've symlinked a few files (.tfvars) from a global directory down into our specific provider environments... this allows us to use global variables in addition to the local variable files (.tfvars) per environment.  This helps to keep our terraform project DRY (don't repeat yourself) and can help with reusability and consistency across contexts.
+
+#### TIP 4: Modules for Consistency across Environments
+Note that we've got a modules directory. This is where we will create some reusable modules that we can leverage for consistency across environments for a provider. This helps to keep our terraform project DRY (don't repeat yourself) and can help with reusability and consistency across environments.
+
+
 ## Summary
+Ok, we're ready to start working with Terraform. As we roll up our sleeves and get to work, we'll be covering more topics in depth as we go with each provider and solution we develop.  At this point we have accomplished the following...
+
+- We've installed the terraform binary
+- We've reviewed our project directory
+- We've reviewed a few good practices
