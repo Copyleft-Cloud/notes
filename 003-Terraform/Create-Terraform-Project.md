@@ -26,7 +26,7 @@ Sweet!  Terraform is installed.  When need to upgrade to the newest version, sim
 
 
 ## Next Steps
-- We're going to setup our Terraform Project.
+- We're going to setup our Terraform Project Directory.
 - We're going to discuss some best practices and get hands-on.
 
 
@@ -46,11 +46,12 @@ git clone git@github.com:Copyleft-Cloud/terraform.git
 ```
 
 
-### STEP 6: Create Our Directory Structure
+### STEP 6: Review Our Directory Structure
 Per our good practices, we are wanting to manage configuration and state separately for each environment.  As we will be using both DigitalOcean and AWS as providers for environments, we'll set up our directory accordingly to separate contexts...
 
 Thus, if we need to manage additional providers and subsequent environments, we have a neat and organized project.  Managing state (.tfstate) separately for each environment removes a substantial amount of risk and limits the blast radius of our infrastructure changes.  
 
+Overview...
 ```
 /
   /global
@@ -76,3 +77,5 @@ Thus, if we need to manage additional providers and subsequent environments, we 
       global.tfvars       # Symlinked from Global
 
 ```
+
+## Summary
