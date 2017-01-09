@@ -1,6 +1,10 @@
 # Terraform + DigitalOcean Provider
 
 
+## Overview
+We've decided to use DigitalOcean to host our Hubot! To get started, we're going to provision our new host using Terraform.
+
+
 ### STEP 1: Review the DigitalOcean Provider Docs
 - https://www.terraform.io/docs/providers/do/index.html
 
@@ -24,5 +28,18 @@ resource "digitalocean_droplet" "web" {
 ```
 
 
-### STEP 2:  Save our API Token in /global/secret.tfvars
-We're going to save our new API token in our /global/secret.tfvars
+### STEP 2:  DigitalOcean API Token
+Let's quickly confirm that we have saved our DigitalOcean API token in /global/secret.tfvars
+
+```
+# DIGITAL OCEAN (DO)
+do_api_token = "<DigitalOcean API Token>"
+```
+
+### STEP 3: Create Environment Directory
+We're going to use DigitalOcean to host several DevOps services. Let's create a directory where we can manage the state of this service environment.  
+
+```
+cd /Users/<username>/Github/copyleft-cloud/terraform/provider-do
+mkdir env-svc
+```
