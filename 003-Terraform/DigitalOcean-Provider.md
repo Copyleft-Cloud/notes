@@ -413,6 +413,25 @@ applicable law.
 root@hubot:~#
 ```
 
+### STEP 16: Push a Commit to Github
+We've changed the State (terraform.tfstate) of our Environment.  Following our success let's push a commit to our Git Repository on Github.  
+
+```
+git status
+git add .
+
+git commit -m "Provisioned New Hubot Droplet to the Service Environment hosted on DigitalOcean Provider"
+    [master 1216eb1] Provisioned New Hubot Droplet to the Service Environment hosted on DigitalOcean Provider
+    5 files changed, 87 insertions(+), 1 deletion(-)
+      create mode 100644 provider-do/env-svc/device-hubot.tf
+      create mode 100644 provider-do/env-svc/service.tf
+      create mode 100644 provider-do/env-svc/terraform.tfstate
+      create mode 100644 provider-do/env-svc/terraform.tfstate.backup
+
+git push -u origin master
+
+```
+
 ## SUCCESS!
 As you can see, we can now access our new Digital Ocean instances using our SSH Key.  
 
@@ -421,7 +440,7 @@ Hopefully this gives you a great primer into the power of using Terraform to def
 ## Summary
 Ok, we've accomplished quite a bit here... There is quite a bit more customized provisioning that we can do using Terraform which we will cover in more detail as we go.
 
-Here is what we've knocked out... 
+Here is what we've knocked out...
 - Defined a New Environment in our Terraform Project (env-svc)
 - Created and Deleted a Droplet using Terraform
 - Used our API Token and the DigitalOcean API to retrieve our SSH Keys
