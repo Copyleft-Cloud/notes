@@ -32,7 +32,7 @@ resource "digitalocean_droplet" "web" {
 Let's quickly confirm that we have saved our DigitalOcean API token in /global/secret.tfvars
 
 ```
-# DIGITAL OCEAN (DO)
+# DIGITALOCEAN (DO)
 do_api_token = "<DigitalOcean API Token>"
 ```
 
@@ -48,12 +48,12 @@ mkdir env-svc
 Let's create a terraform file for this environment which configures the provider.
 
 ```
-# DEFINE THE VARIABLE FOR THE DIGITAL OCEAN API TOKEN
+# DEFINE THE VARIABLE FOR THE DIGITALOCEAN API TOKEN
 # SET THE VALUE IN /global/secret.tfvars
 variable "do_api_token" {}
 
 
-# CONFIGURE THE DIGITAL OCEAN PROVIDER
+# CONFIGURE THE DIGITALOCEAN PROVIDER
 provider "digitalocean" {
     token = "${var.do_api_token}"
 }
@@ -229,7 +229,7 @@ Let's update our ./global/secret.tfvars file and add the ssh_key_id we want to u
 
 ./global/secret.tfvars
 ```
-# DIGITAL OCEAN (DO)
+# DIGITALOCEAN (DO)
 do_api_token = "<api_token>"
 do_ssh_key_id = "<ssh_key_id>"
 ```
@@ -433,7 +433,7 @@ git push -u origin master
 ```
 
 ## SUCCESS!
-As you can see, we can now access our new Digital Ocean instances using our SSH Key.  
+As you can see, we can now access our new DigitalOcean instances using our SSH Key.  
 
 Hopefully this gives you a great primer into the power of using Terraform to define, configure, and provision cloud hosted infrastructure.  
 
