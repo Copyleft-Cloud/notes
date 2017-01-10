@@ -49,6 +49,16 @@ On your Local Workstation… let’s create a workspace directory where we will 
     pwd /Users/brian.hooper/Github/copyleft-cloud
 ```
 
+#### TIP
+As you create your Code Repositories, be sure to add your User and Email information to the local git config (i.e. ./.git/config) so that all of your commits and contributions are tracked back to your Github profile.
+
+Just place the following config at the top of your ./.git/config
+```
+[user]
+	name = John Doe
+	email = john.doe@example.com
+```
+
 ## Summary
 - We've created our GitHub Organization and Team
 - We've invited new Team Member(s)
