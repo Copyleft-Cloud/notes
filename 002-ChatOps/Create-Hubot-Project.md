@@ -123,5 +123,5 @@ git status
 - We've Pushed our initial commit to Github
 
 ## Next Steps
-- First, let's deploy a DigitalOcean Droplet to host our hubot
+- First, let's deploy a DigitalOcean Droplet to host our hubot (e.g. Terraform)
 - Second, let's set up a continuous delivery pipeline via Travis-CI for our Hubot
